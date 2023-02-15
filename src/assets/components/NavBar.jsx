@@ -1,35 +1,47 @@
 import { Navbar, Container, Nav, Row, Col } from "react-bootstrap";
 import { BsSearch, BsFillPersonFill, BsFillBellFill } from "react-icons/bs";
 import { ReactComponent as Logo } from "../imgs/NetflixLogo.svg";
+import { Link, useLocation } from "react-router-dom";
 
 const NavbarComponent = () => {
+  const location = useLocation();
+
   return (
     <Navbar variant="dark" expand="lg">
       <Container fluid className="p-0">
         <Row className="d-flex justify-content-between align-items-center w-100 p-0">
           <Col xs={12} sm={9} className="p-0 navContainer">
-            <Navbar.Brand href="#home">
+            <Link to="/home" className="navbar-brand">
               <Logo id="NavLogo" />
-            </Navbar.Brand>
+            </Link>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#home" className="NavbarLink">
+                <Link
+                  to="/home"
+                  className={`NavbarLink nav-link nav-link ${location.pathname === "/home" ? "active" : ""}`}
+                >
                   Home
-                </Nav.Link>
-                <Nav.Link href="#shows" className="NavbarLink active">
+                </Link>
+                <Link
+                  to="/TvShows"
+                  className={`NavbarLink nav-link ${location.pathname === "/TvShows" ? "active" : ""}`}
+                >
                   TV Shows
-                </Nav.Link>
-                <Nav.Link href="#movies" className="NavbarLink">
+                </Link>
+                <Link to="/movies" className={`NavbarLink nav-link ${location.pathname === "/movies" ? "active" : ""}`}>
                   Movies
-                </Nav.Link>
-                <Nav.Link href="#added" className="NavbarLink">
+                </Link>
+                <Link
+                  to="/recently"
+                  className={`NavbarLink nav-link ${location.pathname === "/recently" ? "active" : ""}`}
+                >
                   Recently Added
-                </Nav.Link>
-                <Nav.Link href="#list" className="NavbarLink">
+                </Link>
+                <Link to="/myList" className={`NavbarLink nav-link ${location.pathname === "/myList" ? "active" : ""}`}>
                   My list
-                </Nav.Link>
+                </Link>
               </Nav>
             </Navbar.Collapse>
           </Col>

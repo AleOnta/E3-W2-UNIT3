@@ -1,15 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import FooterComponent from "./assets/components/FooterComponent";
-import MainComponent from "./assets/components/MainComponent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import TvShows from "./assets/components/TvShows";
 import NavbarComponent from "./assets/components/NavBar";
+import FooterComponent from "./assets/components/FooterComponent";
 
 function App() {
   return (
     <>
-      <NavbarComponent />
-      <MainComponent />
-      <FooterComponent />
+      <BrowserRouter>
+        <NavbarComponent />
+        <Routes>
+          <Route path="/tvShows" element={<TvShows />} />
+        </Routes>
+        <FooterComponent />
+      </BrowserRouter>
     </>
   );
 }

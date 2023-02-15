@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Col, Row, Spinner, Alert, useAccordionToggle } from "react-bootstrap";
+import { Col, Row, Spinner, Alert } from "react-bootstrap";
 
 import PosterComponent from "./PosterComponent";
 
