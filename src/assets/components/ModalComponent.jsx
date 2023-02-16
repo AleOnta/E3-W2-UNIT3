@@ -13,7 +13,7 @@ const ModalComponent = (props) => {
   // };
 
   const [ref, setRef] = useState({
-    modalContent: {}, // was {}
+    modalContent: {},
     isLoading: true,
     hasError: false,
     errorMessage: "",

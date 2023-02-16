@@ -7,7 +7,7 @@ const MainComponent = () => {
     <Container fluid bg="dark" variant="dark" className="pt-3">
       <UpperComponent />
       <ShowsRowComponent typo="Trending Now" toFetch="harry%20potter" />
-      <ShowsRowComponent typo="Watch it Again" toFetch="teletubbies" />
+      <ShowsRowComponent typo="Watch it Again" toFetch="pokemon" />
       <ShowsRowComponent typo="New Releases" toFetch="dragon%20ball" />
     </Container>
   );

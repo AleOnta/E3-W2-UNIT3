@@ -342,3 +342,32 @@ body {
 .modalButton:hover {
   z-index: 4;
 }
+
+/*  CSS instructions for the movie details route */
+
+.detail {
+  font-size: 1.1em;
+}
+
+.detail strong {
+  color: white;
+}
+
+.detail.title {
+  font-size: 1.8em;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail.subtitle {
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #363232a1;
+  font-size: 1.1em;
+}
+
+.detail.lastDetail {
+  font-size: 0.8em;
+}
